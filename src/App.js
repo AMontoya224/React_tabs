@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Tab from './Components/Tab/Tab';
+
+
 
 function App() {
+  let tabArray = [
+    {
+      etiqueta : 'Tab 1',
+      propiedad : 'Tab 1 content is showing here'
+    },
+    {
+      etiqueta : 'Tab 2',
+      propiedad : 'Tab 2 content is showing here'
+    },
+    {
+      etiqueta : 'Tab 3',
+      propiedad : 'Tab 3 content is showing here'
+    }
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tab tabArray={ tabArray } />
     </div>
   );
 }
